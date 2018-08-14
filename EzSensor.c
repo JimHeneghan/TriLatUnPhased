@@ -21,7 +21,7 @@ void Transmission(Grid *g, int j,  double time){
         char filename[100];
         double Time1;
         FILE *out;
-        sprintf(filename, "PBGData/Zone10/EmptyLat%d.txt", j);
+        sprintf(filename, "PBGData/Zone11/EmptyLat%d.txt", j);
         out = fopen(filename, "a");
         Time1 = time*5.4683e-13;
 
