@@ -26,7 +26,7 @@ print a
 GammaX = 2*math.pi/(a*math.sqrt(3))
 #KxMax = 2*math.pi/(3*a)
 
-print "Zone6"
+print "Zone7"
 print "X to Gamma"
 k[0] = -GammaX
 k[1] = 0
@@ -38,7 +38,7 @@ for i in range(0,20):
 #    k[1] = k[1] - step*math.sqrt(3)/2
     k[4] +=1.0
     print k
-    print "Zone6"
+    print "Zone7"
 
 
 
@@ -50,11 +50,11 @@ GammaJ = 2*GammaX/math.sqrt(3)
 step = GammaJ/20
 for i in range(0,20):
     runsim(k)
-    k[0] = k[0] - step/2
-    k[1] = k[1] + step*math.sqrt(3)/2
+    k[0] = k[0] - step*math.sqrt(3)/2
+    k[1] = k[1] - step/2
     k[4] +=1.0
     print k
-    print "Zone6"
+    print "Zone7"
 
 print "X to J"
 XJ = GammaX/math.sqrt(3)
@@ -63,9 +63,9 @@ step = XJ/20
 for i in range(0, 20):
     runsim(k)
 #    k[0] = k[0] + step*math.sqrt(3)/2
-    k[1] = k[1] - step
+    k[1] = k[1] + step
     #k[0] = 2.0*math.pi/(math.sqrt(3.0)*a)*(i - 1)/20.0
     #k[1] = 2.0*math.pi/(3.0*a)*(i - 1)/20.0
     print k
-    print "Zone6"
+    print "Zone7"
     k[4] +=1.0
